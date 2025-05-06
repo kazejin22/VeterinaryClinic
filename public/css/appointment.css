@@ -1,0 +1,288 @@
+.add-pet-section {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.add-pet-btn {
+    color: #9333ea; /* Ungu */
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.add-pet-btn:hover {
+    background-color: #9333ea;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(147, 51, 234, 0.3);
+}
+footer {
+    background-color: #1e293b; /* Dark background for footer */
+    color: #fefefe; /* Light text color */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    max-width: 350px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ffeb3b; /* Pastel yellow color for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #fdd835; /* Darker yellow on hover */
+}
+
+.service-hours table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+margin-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-hours th {
+background-color: #3b82f6; /* Soft blue */
+color: white;
+text-align: left;
+padding: 12px 16px;
+font-size: 16px;
+}
+
+.service-hours td {
+background-color: #f0f4ff; /* Soft very light blue */
+color: #1e293b;
+padding: 12px 16px;
+font-size: 15px;
+transition: background-color 0.3s ease;
+}
+
+.service-hours tr:nth-child(even) td {
+background-color: #e2e8f0; /* Light grey-blue stripe */
+}
+
+.service-hours tr:hover td {
+background-color: #dbeafe; /* Hover effect */
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6fd;
+}
+
+header {
+    background-color: #d0bfff;
+    padding: 0.5rem 2rem;;
+    text-align: center;
+    color: #5f27cd;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #a29bfe;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #b185db; /* ubah ke ungu pastel */
+}
+
+form.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #5f27cd;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.form-group select,
+.form-group input[type="datetime-local"] {
+    padding: 0.8rem 1rem;
+    border: 2px solid #dcd6f7;
+    border-radius: 12px;
+    background-color: #f9f8ff;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group select:focus,
+.form-group input[type="datetime-local"]:focus {
+    border-color: #a29bfe;
+    background-color: #ffffff;
+    outline: none;
+}
+
+button.btn-primary {
+    background-color: #d0bfff; /* pastel ungu muda */
+    color: #5f27cd; /* ungu lebih tua buat teks */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1.5rem;
+}
+
+button.btn-primary:hover {
+    background-color: #c5b3f7; /* ungu pastel saat hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.navbar {
+background-color:#d0bfff ;
+padding: 0.5rem 2rem;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+display: flex;
+align-items: center;
+font-size: 1.8rem;
+font-weight: 700;
+color:rgb(255, 255, 255);
+text-decoration: none;
+gap: 10px;
+}
+
+.logo img {
+width: 60px ;
+vertical-align: middle;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 2rem;
+margin: 0;
+padding: 0;
+}
+
+.nav-links li {
+display: inline;
+}
+
+.nav-links a {
+text-decoration: none;
+color:rgb(255, 255, 255);
+font-weight: 600;
+font-size: 1rem;
+position: relative;
+transition: color 0.3s;
+}
+
+.nav-links a::after {
+content: "";
+display: block;
+width: 0;
+height: 2px;
+background: #faa2c1;
+transition: width 0.3s;
+position: absolute;
+bottom: -4px;
+left: 0;
+}
+
+.nav-links a:hover {
+color: #f783ac;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}

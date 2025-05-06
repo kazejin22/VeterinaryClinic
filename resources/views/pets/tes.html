@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tambah Hewan Peliharaan</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    /* Pastel Gradient Background */
+    .bg-pastel-gradient {
+      background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%);
+    }
+
+    /* Tombol pastel custom */
+    .cute-button {
+      background: linear-gradient(to right, #A1C4FD, #C2E9FB); /* Pastel biru */
+      color: white;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .cute-button:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .cute-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(161, 196, 253, 0.4); /* Focus effect */
+    }
+  </style>
+</head>
+<body class="bg-pastel-gradient">
+
+  <div class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="max-w-lg w-full bg-white p-8 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105">
+      <div class="text-center mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+          class="w-16 h-16 mx-auto mb-4 text-teal-500" viewBox="0 0 24 24">
+          <path d="M12 2L2 12h3v6h6v-4h6v-6h3z" />
+        </svg>
+        <h2 class="text-2xl font-bold text-teal-600 mb-2">Add Your Pet</h2>
+        <p class="text-gray-600 text-sm">Fill this form to add pet in your account</p>
+      </div>
+
+      <form method="POST" action="{{ route('pets.store') }}">
+        @csrf
+
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Pets Name</label>
+          <input type="text" name="name" id="name" required
+            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value="{{ old('name') }}">
+          @error('name') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+          <label for="species" class="block text-sm font-medium text-gray-700">Species</label>
+          <input type="text" name="species" id="species" required
+            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value="{{ old('species') }}">
+          @error('species') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+          <label for="breed" class="block text-sm font-medium text-gray-700">Breed</label>
+          <input type="text" name="breed" id="breed"
+            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value="{{ old('breed') }}">
+          @error('breed') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+          <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+          <input type="number" name="age" id="age" min="0"
+            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value="{{ old('age') }}">
+          @error('age') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-6">
+          <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+          <select name="gender" id="gender" required
+            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="">--choose--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          @error('gender') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+        </div>
+
+        <!-- Tombol submit -->
+        <div class="flex justify-center mt-6">
+          <button type="submit" class="cute-button">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

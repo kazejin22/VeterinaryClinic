@@ -1,0 +1,284 @@
+footer {
+    background-color: #1e293b; /* Dark background for footer */
+    color: #fefefe; /* Light text color */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    max-width: 350px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ffeb3b; /* Pastel yellow color for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #fdd835; /* Darker yellow on hover */
+}
+
+.service-hours table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+margin-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-hours th {
+background-color: #3b82f6; /* Soft blue */
+color: white;
+text-align: left;
+padding: 12px 16px;
+font-size: 16px;
+}
+
+.service-hours td {
+background-color: #f0f4ff; /* Soft very light blue */
+color: #1e293b;
+padding: 12px 16px;
+font-size: 15px;
+transition: background-color 0.3s ease;
+}
+
+.service-hours tr:nth-child(even) td {
+background-color: #e2e8f0; /* Light grey-blue stripe */
+}
+
+.service-hours tr:hover td {
+background-color: #dbeafe; /* Hover effect */
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+header {
+background-color: #b3e0f7; /* Pastel blue background */
+padding: 0.5rem 2rem;
+text-align: center;
+color: #006f8e; /* Darker blue text for contrast */
+font-weight: bold;
+font-size: 1.8rem;
+border-bottom: 2px solid #8ccaf7; /* Pastel blue border */
+}
+
+
+
+.navbar {
+background-color: #b3e0f7;
+padding: 0.5rem 2rem;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+display: flex;
+align-items: center;
+font-size: 1.8rem;
+font-weight: 700;
+color:rgb(255, 255, 255);
+text-decoration: none;
+gap: 10px;
+}
+
+.logo img {
+width: 60px ;
+vertical-align: middle;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 2rem;
+margin: 0;
+padding: 0;
+}
+
+.nav-links li {
+display: inline;
+}
+
+.nav-links a {
+text-decoration: none;
+color:rgb(255, 255, 255);
+font-weight: 600;
+font-size: 1rem;
+position: relative;
+transition: color 0.3s;
+}
+
+.nav-links a::after {
+content: "";
+display: block;
+width: 0;
+height: 2px;
+background: #faa2c1;
+transition: width 0.3s;
+position: absolute;
+bottom: -4px;
+left: 0;
+}
+
+.nav-links a:hover {
+color: #f783ac;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fcff;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-section {
+background-image: url('/images/kumel2.jpg'); /* Ganti dengan path gambar kamu */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh; /* Full height sesuai layar */
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+position: relative;
+padding: 20px;
+}
+
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 800px;
+}
+
+.hero-content h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+.hero-content p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0096c7;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0077b6;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+}
+
+.btn-secondary:hover {
+    background-color: #e0f7fa;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
+
+.cta {
+    background-color: #e0f7fa;
+    padding: 50px 20px;
+}
+
+.cta h3 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    color: #0077b6;
+}
